@@ -1,3 +1,6 @@
+import throttle from 'lodash.throttle';
+import Player from '@vimeo/player';
+
 const TIME_PLAYED = 'videoplayer-current-time';
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
