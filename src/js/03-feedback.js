@@ -13,8 +13,10 @@ form.addEventListener('submit', throttle(onFormSubmit, 500));
 checkOnSavedMassege();
 
 function onFormInput(e) {
-  formData[e.target.name] = e.target.value;
-
+  // formData[e.target.name] = e.target.value;
+  formData.email = emailE.value;
+  formData.massege = textareaE.value;
+  console.log(formData);
   localStorage.setItem(STOREGE_KEY, JSON.stringify(formData));
 }
 
@@ -32,5 +34,3 @@ function checkOnSavedMassege(e) {
     textareaE.value = parseMessage.message;
   }
 }
-
-console.log(formData);
