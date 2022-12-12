@@ -5,7 +5,6 @@ const emailE = document.querySelector('input');
 const textareaE = document.querySelector('textarea');
 
 const formData = {};
-const stringData = '';
 const STOREGE_KEY = 'feedback-form-state';
 
 form.addEventListener('input', onFormInput);
