@@ -23,7 +23,7 @@ function onFormSubmit(e) {
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(STOREGE_KEY);
-  console.log(formData);
+  console.log(JSON.parse(localStorage.getItem(STOREGE_KEY)));
 }
 
 function checkOnSavedMassege(e) {
