@@ -16,7 +16,6 @@ function onFormInput(e) {
   // formData[e.target.name] = e.target.value;
   formData.email = emailE.value;
   formData.massege = textareaE.value;
-  console.log(formData);
   localStorage.setItem(STOREGE_KEY, JSON.stringify(formData));
 }
 
@@ -24,6 +23,7 @@ function onFormSubmit(e) {
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(STOREGE_KEY);
+  console.log(formData);
 }
 
 function checkOnSavedMassege(e) {
