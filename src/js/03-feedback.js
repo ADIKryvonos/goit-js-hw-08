@@ -31,7 +31,7 @@ function checkOnSavedMassege(e) {
   const saveMassege = localStorage.getItem(STOREGE_KEY);
   if (saveMassege) {
     const parseMessage = JSON.parse(saveMassege);
-    stringData[parseMessage.name] = parseMessage.value;
+    e.target.name = parseMessage.value;
     // emailE.value = parseMessage.email;
     // textareaE.value = parseMessage.message;
   }
