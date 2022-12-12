@@ -11,9 +11,11 @@ form.addEventListener('input', onFormInput);
 form.addEventListener('submit', throttle(onFormSubmit, 500));
 
 checkOnSavedMassege();
+console.log(formData);
 
 function onFormInput(e) {
   formData[e.target.name] = e.target.value;
+
   localStorage.setItem(STOREGE_KEY, JSON.stringify(formData));
 }
 

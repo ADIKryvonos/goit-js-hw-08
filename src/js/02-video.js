@@ -10,8 +10,8 @@ const onPlay = function (e) {
 };
 
 const timer = localStorage.getItem(TIME_PLAYED);
-if (timer !== 0) {
-  player.setCurrentTime(localStorage.getItem(TIME_PLAYED));
+if (timer) {
+  player.setCurrentTime(timer);
 }
 
 player.on('timeupdate', throttle(onPlay, 1000));
